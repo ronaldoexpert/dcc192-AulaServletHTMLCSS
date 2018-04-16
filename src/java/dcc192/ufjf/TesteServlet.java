@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "TesteServlet", urlPatterns = {"/teste.html"})
+@WebServlet(name = "TesteServlet", urlPatterns = {"/teste.html","/teste2.html"})
 public class TesteServlet extends HttpServlet {
 
     @Override

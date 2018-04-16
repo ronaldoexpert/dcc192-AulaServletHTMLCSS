@@ -6,5 +6,9 @@
         <p>Voce tem ${idade} anos!</p>
     </c:if>
 
+<c:forEach items="${numeros}" var="numero">    
+    <li>${numero}</li>   
+</c:forEach>
+
 <%@include file="jspf/rodape.jspf" %>
 
