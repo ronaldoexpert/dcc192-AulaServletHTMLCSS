@@ -1,0 +1,28 @@
+<%@page import="java.util.Date"%>
+<%@page pageEncoding="UTF-8" %>
+<%@page import="java.util.Date"%>
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Introdução</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    <header>
+            <h1>Hello World!</h1>
+            <p>São <%=new Date() %></p>
+    </header>
+    <aside>
+        <menu>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="teste.html">Teste</a></li>
+            </ul>
+        </menu>    
+    </aside>
+    <main>
+        <article>
+        <h1> <%=request.getAttribute("nome")%></h1>
+        </article>
+    
