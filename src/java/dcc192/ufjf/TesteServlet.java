@@ -1,6 +1,9 @@
 package dcc192.ufjf;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,6 +30,16 @@ public class TesteServlet extends HttpServlet {
         
         request.setAttribute("nome", nome);
         request.setAttribute("idade", idade);
+        
+        
+        if("/teste2.html".equals(request.getServletPath())){
+            List<Integer> numeros = new ArrayList();
+            Random r = new Random();
+            for(int i = 0; i<10; i++){
+                numeros.add(r.nextInt(100) + 1);
+            }
+            request.setAttribute("numeros", numeros);
+        }
         
         RequestDispatcher dispachante = request.getRequestDispatcher("/WEB-INF/teste.jsp");
         dispachante.forward(request, response);
